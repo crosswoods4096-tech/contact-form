@@ -8,18 +8,19 @@
 
 <div class="contact-form__content">
   <div class="contact-form__heading">
-    <h2>お問い合わせ</h2>
+    <h2>Contact</h2>
   </div>
-  <form class="form" action="contacts/confirm" method="post">
+  <form class="form" action="contacts/confirm" method="post" novalidate>
     @csrf
     <div class="form__group">
       <div class="form__group-title">
         <span class="form__label--item">お名前</span>
-        <span class="form__label--required">必須</span>
+        <span class="form__label--required">※</span>
       </div>
       <div class="form__group-content">
         <div class="form__input--text">
-          <input type="text" name="name" placeholder="テスト太郎" value="{{ old('name') }}" />
+          <input type="text" name="last_name" placeholder="山田" value="{{ old('last_name') }}" />
+          <input type="text" name="first_name" placeholder="太郎" value="{{ old('first_name') }}" />
         </div>
         <div class="form__error">
           @error('name')
@@ -28,10 +29,12 @@
         </div>
       </div>
     </div>
+
+    
     <div class="form__group">
       <div class="form__group-title">
         <span class="form__label--item">メールアドレス</span>
-        <span class="form__label--required">必須</span>
+        <span class="form__label--required">※</span>
       </div>
       <div class="form__group-content">
         <div class="form__input--text">
@@ -47,7 +50,7 @@
     <div class="form__group">
       <div class="form__group-title">
         <span class="form__label--item">電話番号</span>
-        <span class="form__label--required">必須</span>
+        <span class="form__label--required">※</span>
       </div>
       <div class="form__group-content">
         <div class="form__input--text">
@@ -63,6 +66,7 @@
     <div class="form__group">
       <div class="form__group-title">
         <span class="form__label--item">お問い合わせ内容</span>
+        <span class="form__label--required">※</span>
       </div>
       <div class="form__group-content">
         <div class="form__input--textarea">

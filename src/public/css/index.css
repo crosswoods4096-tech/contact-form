@@ -12,12 +12,12 @@
 
 .form {
   margin: 0 auto;
-  width: 70%;
+  width: 35%;
   text-align: center;
 }
 
 .form__group {
-  display: flex;
+  display: flexbox;
   justify-content: space-between;
   margin-bottom: 15px;
 }
